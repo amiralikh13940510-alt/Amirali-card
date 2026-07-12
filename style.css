@@ -170,3 +170,49 @@ p{
         transform:translateY(0);
     }
 }
+
+/* ورود کارت */
+
+#card{
+    opacity:0;
+    transform:translateY(60px) scale(.9);
+    transition:1s ease;
+}
+
+#card.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+.btn2{
+    margin-top:20px;
+    padding:14px 35px;
+    border-radius:14px;
+    border:2px solid gold;
+    background:#111;
+    color:gold;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+}
+
+.btn2:hover{
+    background:gold;
+    color:#111;
+    transform:scale(1.08);
+    box-shadow:0 0 20px gold;
+}
+
+.fade{
+    animation:fade .4s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
