@@ -1,75 +1,60 @@
-// Splash Screen
 const splash = document.getElementById("splash");
 const card = document.getElementById("card");
 
 setTimeout(() => {
+
     splash.style.opacity = "0";
 
     setTimeout(() => {
         splash.style.display = "none";
         card.classList.remove("hidden");
-    }, 1000);
 
-}, 2200);
+        setTimeout(()=>{
+            card.classList.add("show");
+        },100);
 
-// Language Switch
+    },1000);
 
-let fa = true;
+},2200);
 
-document.getElementById("lang").onclick = function () {
 
-    if (fa) {
+// تغییر زبان
 
-        document.getElementById("nameFa").innerHTML =
-            "AmirAli Khorshidi";
+let fa=true;
 
-        document.getElementById("jobFa").innerHTML =
-            "Sixth Grade Student";
+const name=document.getElementById("nameFa");
+const job=document.getElementById("jobFa");
+const desc=document.getElementById("descFa");
+const btn=document.getElementById("lang");
 
-        document.getElementById("descFa").innerHTML =
-            "Gamer & Computer Enthusiast";
+btn.onclick=function(){
 
-        this.innerHTML = "فارسی 🇮🇷";
+    name.classList.remove("fade");
+    job.classList.remove("fade");
+    desc.classList.remove("fade");
 
-    } else {
+    void name.offsetWidth;
 
-        document.getElementById("nameFa").innerHTML =
-            "امیرعلی خورشیدی";
+    name.classList.add("fade");
+    job.classList.add("fade");
+    desc.classList.add("fade");
 
-        document.getElementById("jobFa").innerHTML =
-            "دانش آموز پایه ششم";
+    if(fa){
 
-        document.getElementById("descFa").innerHTML =
-            "علاقه مند به گیم و کامپیوتر";
+        name.innerHTML="AmirAli Khorshidi";
+        job.innerHTML="Sixth Grade Student";
+        desc.innerHTML="Gamer & Computer Enthusiast";
+        btn.innerHTML="🇮🇷 فارسی";
 
-        this.innerHTML = "English 🇺🇸";
+    }else{
+
+        name.innerHTML="امیرعلی خورشیدی";
+        job.innerHTML="دانش آموز پایه ششم";
+        desc.innerHTML="علاقه مند به گیم و کامپیوتر";
+        btn.innerHTML="🌐 English";
 
     }
 
-    fa = !fa;
-
-};
-
-// Share Button
-
-function shareCard(){
-
-if(navigator.share){
-
-navigator.share({
-
-title:"AmirAli Khorshidi",
-
-text:"Visit My Digital Card",
-
-url:location.href
-
-});
-
-}else{
-
-alert("مرورگر شما از اشتراک گذاری پشتیبانی نمی‌کند.");
-
-}
+    fa=!fa;
 
 }
