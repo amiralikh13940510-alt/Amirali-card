@@ -52,3 +52,34 @@ btn.onclick=function(){
     fa=!fa;
 
 }
+
+// اشتراک گذاری
+
+function shareCard(){
+
+    if(navigator.share){
+
+        navigator.share({
+            title:"AmirAli Khorshidi",
+            text:"کارت ویزیت امیرعلی خورشیدی",
+            url:window.location.href
+        });
+
+    }else{
+
+        alert("مرورگر شما از اشتراک گذاری پشتیبانی نمی‌کند.");
+
+    }
+
+}
+
+// کپی لینک
+
+function copyLink(){
+
+    navigator.clipboard.writeText(window.location.href);
+
+    alert("✅ لینک کارت کپی شد.");
+
+}
+
