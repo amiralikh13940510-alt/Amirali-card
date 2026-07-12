@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AmirAli Khorshidi</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Splash -->
+
+<div id="splash">
+
+<div class="logo">A</div>
+
+<h1>AmirAli Khorshidi</h1>
+
+<p>Loading...</p>
+
+</div>
+
+<!-- Card -->
+
+<div id="card" class="hidden">
+
+<img src="profile.jpg" class="profile">
+
+<h2 id="nameFa">امیرعلی خورشیدی</h2>
+
+<h3 id="jobFa">
+دانش آموز پایه ششم
+</h3>
+
+<p id="descFa">
+علاقه مند به گیم و کامپیوتر
+</p>
+
+<a href="tel:09936545468" class="btn">
+📞 تماس
+</a>
+
+<a href="https://rubika.ir/amiralishoty2204" class="btn">
+روبیکا
+</a>
+
+<a href="https://ble.ir/khorshidiamirali" class="btn">
+بله
+</a>
+
+<a href="https://eitaa.com/amirali139466" class="btn">
+ایتا
+</a>
+
+<button id="lang" class="btn2">
+
+English 🇺🇸
+
+</button>
+
+<hr>
+
+<h3>QR Code</h3>
+
+<img src="qr.png" class="qr">
+
+<p class="copy">
+© 2026 AmirAli Khorshidi
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

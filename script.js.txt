@@ -1,0 +1,75 @@
+// Splash Screen
+const splash = document.getElementById("splash");
+const card = document.getElementById("card");
+
+setTimeout(() => {
+    splash.style.opacity = "0";
+
+    setTimeout(() => {
+        splash.style.display = "none";
+        card.classList.remove("hidden");
+    }, 1000);
+
+}, 2200);
+
+// Language Switch
+
+let fa = true;
+
+document.getElementById("lang").onclick = function () {
+
+    if (fa) {
+
+        document.getElementById("nameFa").innerHTML =
+            "AmirAli Khorshidi";
+
+        document.getElementById("jobFa").innerHTML =
+            "Sixth Grade Student";
+
+        document.getElementById("descFa").innerHTML =
+            "Gamer & Computer Enthusiast";
+
+        this.innerHTML = "فارسی 🇮🇷";
+
+    } else {
+
+        document.getElementById("nameFa").innerHTML =
+            "امیرعلی خورشیدی";
+
+        document.getElementById("jobFa").innerHTML =
+            "دانش آموز پایه ششم";
+
+        document.getElementById("descFa").innerHTML =
+            "علاقه مند به گیم و کامپیوتر";
+
+        this.innerHTML = "English 🇺🇸";
+
+    }
+
+    fa = !fa;
+
+};
+
+// Share Button
+
+function shareCard(){
+
+if(navigator.share){
+
+navigator.share({
+
+title:"AmirAli Khorshidi",
+
+text:"Visit My Digital Card",
+
+url:location.href
+
+});
+
+}else{
+
+alert("مرورگر شما از اشتراک گذاری پشتیبانی نمی‌کند.");
+
+}
+
+}
