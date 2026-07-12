@@ -2,21 +2,15 @@ const splash = document.getElementById("splash");
 const card = document.getElementById("card");
 
 setTimeout(() => {
-
     splash.style.opacity = "0";
 
     setTimeout(() => {
         splash.style.display = "none";
         card.classList.remove("hidden");
-
-        setTimeout(()=>{
-            card.classList.add("show");
-        },100);
-
+        card.classList.add("show");
     },1000);
 
 },2200);
-
 
 // تغییر زبان
 
